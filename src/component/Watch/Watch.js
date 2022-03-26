@@ -1,10 +1,11 @@
 import React from 'react';
 import './Watch.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+  import {  faShoppingCart} from '@fortawesome/free-solid-svg-icons'
 
-
-const Watch = (props) => {
-    console.log(props);
-    const {name, id , picture, price} = props.product;
+const Watch = ({product, handleAddToCart}) => {
+    
+    const {name, id , picture, price} = product;
     return (
         <div className="watch-container">
             <img src={picture} alt="" />
@@ -13,8 +14,8 @@ const Watch = (props) => {
             <p className= "watch-id">Id: {id}</p>
             <h4>Price: ${price}</h4>
             </div>
-            <button  className= "cart-btn">
-               <p>Add to Cart</p> </button>
+            <button onClick={() => handleAddToCart(product)} className= "cart-btn">
+               <p>Add to Cart</p> <FontAwesomeIcon icon ={ faShoppingCart } ></FontAwesomeIcon> </button>
         </div>
     );
 };
