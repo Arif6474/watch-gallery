@@ -10,3 +10,9 @@
 .cart-container{
     background: rgb(234, 255, 157);
 }
+
+@media screen and (max-width:480px) {
+    .products-container{
+        grid-template-columns: 1fr;
+    }
+}

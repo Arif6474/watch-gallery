@@ -50,3 +50,9 @@
     transition: 0.7s ;
     color: wheat;
 }
+
+@media screen and (max-width:480px) {
+    .watch-container{
+        grid-template-columns: 1fr;
+    }
+}
