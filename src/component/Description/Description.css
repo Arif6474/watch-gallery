@@ -1,0 +1,16 @@
+.description{
+    margin: 20px;
+    font-size:15px;
+    padding: 0 50px;
+}
+
+.description-container{
+    background-color:rgb(241, 222, 113);
+    margin: 20px 0px;
+}
+
+@media screen and (max-width:400px) {
+    .description-container{
+        grid-template-columns: 1fr;
+    }
+}
